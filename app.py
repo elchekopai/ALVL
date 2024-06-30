@@ -1,7 +1,6 @@
 import os
 import requests
 from flask import Flask, request, jsonify, send_from_directory
-import base64
 
 app = Flask(__name__, static_folder='static', static_url_path='')
 
@@ -67,37 +66,10 @@ def search_artist():
         app.logger.error(f"Error occurred: {e}")
         return jsonify({"error": "An error occurred"}), 500
 
-@app.route('/api/search_suggestions', methods=['GET'])
-def search_suggestions():
-    query = request.args.get('query')
-    if not query:
-        return jsonify([])
-
-    try:
-        token = get_spotify_token()
-        headers = {
-            "Authorization": f"Bearer {token}"
-        }
-        params = {
-            "q": query,
-            "type": "artist",
-            "limit": 5
-        }
-        response = requests.get("https://api.spotify.com/v1/search", headers=headers, params=params)
-        response.raise_for_status()
-
-        artist_items = response.json().get('artists', {}).get('items', [])
-        suggestions = [{"name": artist['name'], "id": artist['id']} for artist in artist_items]
-
-        return jsonify(suggestions)
-
-    except requests.exceptions.RequestException as e:
-        app.logger.error(f"Request failed: {e}")
-        return jsonify([]), 500
-
 @app.route('/')
 def serve_frontend():
     return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host='0.0.0.0', port=port, debug=False)
