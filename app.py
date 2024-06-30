@@ -1,5 +1,6 @@
 import os
 import requests
+import base64  # Добавьте этот импорт
 from flask import Flask, request, jsonify, send_from_directory
 
 app = Flask(__name__, static_folder='static', static_url_path='')
@@ -71,5 +72,4 @@ def serve_frontend():
     return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5001))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(debug=True, port=5001)
