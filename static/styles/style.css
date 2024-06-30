@@ -2,17 +2,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Убираем прокрутку */
     background-color: #121212; /* Черный фон */
     color: #b3b3b3; /* Серый цвет текста */
+    overflow: auto; /* Включаем прокрутку */
 }
 
 .container {
     width: 100%;
     max-width: 600px;
+    padding: 20px; /* Добавляем отступы для мобильной версии */
+    box-sizing: border-box; /* Учитываем отступы в ширину контейнера */
 }
 
 h1 {
@@ -26,14 +28,15 @@ h1 {
     display: flex;
     align-items: center;
     position: relative;
+    margin-bottom: 20px; /* Добавляем отступы для мобильной версии */
 }
 
 .input-field input {
     font-size: 1.2em; /* Уменьшенный размер */
     color: #b3b3b3;
     background-color: #212121; /* Темно-серый фон */
-    border: 6px solid #1db954; /* Зеленая рамка */
-    border-radius: 110px 0 0 110px; /* Округлые края слева */
+    border: 2px solid #1db954; /* Зеленая рамка */
+    border-radius: 50px 0 0 50px; /* Округлые края слева */
     padding: 0 20px; /* Добавляем отступы */
     height: 46px; /* Высота для выравнивания с кнопкой */
     flex-grow: 1; /* Растягиваем на доступную ширину */
@@ -53,7 +56,7 @@ button {
 }
 
 #results img {
-    max-width: 200px; /* Увеличенный размер изображения */
+    max-width: 100%; /* Увеличенный размер изображения */
     border-radius: 50%;
     margin-top: 0.5em; /* Уменьшенное расстояние */
 }
