@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Artist Level</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="valign-wrapper">
+    <div class="container center-align">
+        <h1 class="green-text">Spotify Artist Level</h1>
+        <div class="row input-field">
+            <input type="text" id="artistName" placeholder="Enter artist name" class="validate">
+            <button class="btn waves-effect waves-light green" onclick="searchArtist()">
+                Search
+                <i class="material-icons right">search</i>
+            </button>
+            <ul id="suggestions"></ul>
+        </div>
+        <div id="results" class="section"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

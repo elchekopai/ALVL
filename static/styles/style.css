@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Убираем прокрутку */
+    background-color: #121212; /* Черный фон */
+    color: #b3b3b3; /* Серый цвет текста */
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2em; /* Уменьшенный размер */
+    margin-bottom: 0.5em; /* Уменьшенное расстояние */
+    color: #1db954; /* Зеленый цвет */
+    text-transform: uppercase; /* Капсом */
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-field input {
+    font-size: 1.2em; /* Уменьшенный размер */
+    color: #b3b3b3;
+    background-color: #212121; /* Темно-серый фон */
+    border: 6px solid #1db954; /* Зеленая рамка */
+    border-radius: 110px 0 0 110px; /* Округлые края слева */
+    padding: 0 20px; /* Добавляем отступы */
+    height: 46px; /* Высота для выравнивания с кнопкой */
+    flex-grow: 1; /* Растягиваем на доступную ширину */
+}
+
+button {
+    background-color: #1db954; /* Зеленая кнопка */
+    color: #121212; /* Черный цвет текста */
+    border: none;
+    padding: 0 20px; /* Отступы по бокам */
+    cursor: pointer;
+    border-radius: 0 50px 50px 0; /* Округлые края справа */
+    height: 46px; /* Высота кнопки для выравнивания с полем ввода */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#results img {
+    max-width: 200px; /* Увеличенный размер изображения */
+    border-radius: 50%;
+    margin-top: 0.5em; /* Уменьшенное расстояние */
+}
+
+#results h2 {
+    font-size: 2em; /* Уменьшенный размер */
+    color: #1db954; /* Зеленый цвет */
+    margin-top: 0.5em; /* Уменьшенное расстояние */
+}
+
+#results p {
+    margin: 0.2em 0; /* Уменьшенное расстояние */
+}
+
+#top-tracks {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    color: #535353; /* Темно-серый цвет */
+    margin-bottom: 0.5em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #212121; /* Черный фон таблицы */
+    color: #b3b3b3; /* Белый текст */
+    margin-top: 0.5em;
+}
+
+table, th, td {
+    border: 1px solid #b3b3b3; /* Белая рамка */
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+}
+
+.autocomplete-item {
+    background-color: #212121; /* Темно-серый фон */
+    color: #b3b3b3; /* Белый текст */
+    padding: 0.5em;
+    cursor: pointer;
+    border: 1px solid #535353; /* Граница */
+}
+
+.autocomplete-item:hover {
+    background-color: #535353; /* Светло-серый фон при наведении */
+}
+
+#suggestions {
+    position: absolute;
+    top: 46px; /* Располагаем под полем ввода */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #212121; /* Темно-серый фон */
+    color: #b3b3b3; /* Белый текст */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #535353; /* Граница */
+}
+
+#suggestions li {
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background-color: #535353; /* Светло-серый фон при наведении */
+}
