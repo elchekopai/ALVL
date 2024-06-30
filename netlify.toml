@@ -1,0 +1,9 @@
+[build]
+publish = "static"
+command = "python3 -m http.server" # Замена на команду для статического сайта
+
+[context.production.environment]
+NODE_VERSION = "16"
+
+[context.deploy-preview]
+command = "npm run build-preview"
