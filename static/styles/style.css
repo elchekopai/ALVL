@@ -204,9 +204,6 @@ button.listen {
     }
     h1 {
     font-size: 1.7em; /* Уменьшенный размер */
-    margin-bottom: 0.5em; /* Уменьшенное расстояние */
-    color: #1db954; /* Зеленый цвет */
-    text-transform: uppercase; /* Капсом */
     }
     #results {
         width: 90%;
