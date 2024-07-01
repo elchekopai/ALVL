@@ -106,12 +106,11 @@ table {
     border-collapse: collapse;
     background-color: #212121; /* Черный фон таблицы */
     color: #b3b3b3; /* Белый текст */
-    margin-top: 1em;
+    margin-top: 0.1em;
+    border-radius: 20px; /* Закругляем углы таблицы */
+    overflow: hidden; /* Обеспечиваем правильное отображение закругленных углов */
 }
 
-table, th, td {
-    border: 1px solid #b3b3b3; /* Белая рамка */
-}
 
 th, td {
     padding: 0.5em;
