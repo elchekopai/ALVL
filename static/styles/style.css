@@ -57,7 +57,7 @@ button {
     padding: 0 20px; /* Отступы по бокам */
     cursor: pointer;
     border-radius: 55px; /* Закругленные углы */
-    height: 46px; /* Высота кнопки для выравнивания с полем ввода */
+    height: 40px; /* Высота кнопки для выравнивания с полем ввода */
     display: flex;
     align-items: center;
     justify-content: center;
