@@ -32,23 +32,18 @@ h1 {
     justify-content: flex-start; /* Выравниваем содержимое по верхнему краю */
 }
 
-.input-field { /* строка поиска???*/
+.input-field {
     display: flex;
     align-items: center;
     justify-content: center; /* Центрирование по горизонтали */
+    width: 100%; /* Занять всю доступную ширину */
     position: relative;
     margin: -10px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
 }
 
 .input-field input {
-    font-size: 1.2em; /* Уменьшенный размер */
-    color: #b3b3b3;
-    background-color: #212121; /* Темно-серый фон */
-    border: 2px solid #1db954; /* Зеленая рамка */
-    border-radius: 50px 0 0 50px; /* Округлые края слева */
-    padding: 0 20px; /* Добавляем отступы */
-    height: 46px; /* Высота для выравнивания с кнопкой */
     flex-grow: 1; /* Растягиваем на доступную ширину */
+    margin-right: 10px; /* Отступ между полем ввода и кнопкой */
 }
 
 button {
