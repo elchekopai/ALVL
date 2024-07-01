@@ -190,7 +190,7 @@ button.listen {
 
 @media (max-width: 600px) {
     .container {
-        width: 90%;
+        width: 96%;
         padding: 10px;
     }
     #results img {
