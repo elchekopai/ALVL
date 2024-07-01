@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-    font-size: 2em; /* Уменьшенный размер */
+    font-size: 1.7em; /* Уменьшенный размер */
     margin-bottom: 0.5em; /* Уменьшенное расстояние */
     color: #1db954; /* Зеленый цвет */
     text-transform: uppercase; /* Капсом */
@@ -201,6 +201,12 @@ button.listen {
     .container {
         width: 90%;
         padding: 10px;
+    }
+    h1 {
+    font-size: 1.7em; /* Уменьшенный размер */
+    margin-bottom: 0.5em; /* Уменьшенное расстояние */
+    color: #1db954; /* Зеленый цвет */
+    text-transform: uppercase; /* Капсом */
     }
     #results {
         width: 90%;
