@@ -31,11 +31,10 @@ function searchArtist() {
 
 function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
-    const spotifyLink = `https://open.spotify.com/artist/${data.id}`;
     resultsDiv.innerHTML = `
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name}</h2>
-        <a href="${spotifyLink}" class="btn listen-button" target="_blank">Listen</a>
+        <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">LISTEN</button>
         <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
         <p class="popularity">Popularity: ${data.popularity}</p>
         <h3 id="top-tracks">Top Tracks</h3>
@@ -43,7 +42,7 @@ function displayArtist(data) {
             ${data.top_tracks.map(track => `
                 <tr>
                     <td>${track.name}</td>
-                    <td class="${getPopularityClass(track.popularity)}">${track.popularity}</td>
+                    <td>${track.popularity}</td>
                 </tr>
             `).join('')}
         </table>

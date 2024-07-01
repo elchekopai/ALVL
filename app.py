@@ -51,6 +51,7 @@ def search_artist():
         top_tracks = response.json().get('tracks', [])[:5]
 
         result = {
+            "id": artist_id,
             "name": artist_data['name'],
             "followers": artist_data['followers']['total'],
             "popularity": artist_data['popularity'],

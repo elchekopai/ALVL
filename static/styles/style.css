@@ -31,6 +31,7 @@ h1 {
     margin-bottom: 20px; /* Добавляем отступы для мобильной версии */
 }
 
+/* Изменяем ширину строки поиска */
 .input-field input {
     font-size: 1.2em; /* Уменьшенный размер */
     color: #b3b3b3;
@@ -40,6 +41,8 @@ h1 {
     padding: 0 20px; /* Добавляем отступы */
     height: 46px; /* Высота для выравнивания с кнопкой */
     flex-grow: 1; /* Растягиваем на доступную ширину */
+    width: 80%; /* Устанавливаем ширину строки поиска */
+    max-width: none; /* Убираем максимальную ширину */
 }
 
 button {
@@ -48,21 +51,11 @@ button {
     border: none;
     padding: 0 20px; /* Отступы по бокам */
     cursor: pointer;
-    border-radius: 0 50px 50px 0; /* Округлые края справа */
+    border-radius: 50px 50px 50px 50px; /* Округлые края справа */
     height: 46px; /* Высота кнопки для выравнивания с полем ввода */
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.listen-button {
-    background-color: #1db954; /* Зеленая кнопка */
-    color: #121212; /* Черный цвет текста */
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 10px 0;
-    display: inline-block;
 }
 
 #results img {
@@ -105,26 +98,6 @@ th, td {
     text-align: left;
 }
 
-.light-red {
-    color: #ffcccc; /* Светло-красный цвет */
-}
-
-.white {
-    color: #ffffff; /* Белый цвет */
-}
-
-.light-yellow {
-    color: #ffffcc; /* Светло-желтый цвет */
-}
-
-.light-blue {
-    color: #cceeff; /* Светло-синий цвет */
-}
-
-.light-green {
-    color: #ccffcc; /* Светло-зеленый цвет */
-}
-
 .autocomplete-item {
     background-color: #212121; /* Темно-серый фон */
     color: #b3b3b3; /* Белый текст */
@@ -158,4 +131,34 @@ th, td {
 
 #suggestions li:hover {
     background-color: #535353; /* Светло-серый фон при наведении */
+}
+
+/* Убираем цвет для популярности */
+table td:last-child {
+    background-color: #212121;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: center; /* Центрируем содержимое по горизонтали */
+    min-height: 100vh; /* Высота контейнера равна высоте окна браузера */
+    padding: 20px; /* Добавляем отступы для мобильной версии */
+    box-sizing: border-box; /* Учитываем отступы в ширину контейнера */
+}
+
+button.listen {
+    margin-top: 10px; /* Увеличиваем отступ сверху для подъема кнопки */
+    margin-bottom: 10px; /* Можно также задать отступ снизу для более точной настройки положения */
+    background-color: #1db954; /* Зеленая кнопка */
+    color: #121212; /* Черный цвет текста */
+    border: none;
+    padding: 10px 20px; /* Увеличиваем внутренние отступы для кнопки */
+    cursor: pointer;
+    border-radius: 14px; /* Округлые края */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
