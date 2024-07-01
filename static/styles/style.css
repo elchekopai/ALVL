@@ -105,7 +105,7 @@ table {
     border-collapse: collapse;
     background-color: #212121; /* Черный фон таблицы */
     color: #b3b3b3; /* Белый текст */
-    margin-top: 0.5em;
+    margin-top: 0.1em;
 }
 
 table, th, td {
