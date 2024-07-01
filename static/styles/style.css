@@ -194,6 +194,17 @@ button.listen {
         width: 90%;
         padding: 10px;
     }
+    #results img {
+        width: 300px; /* Устанавливаем фиксированную ширину изображения */
+        height: 300px; /* Устанавливаем фиксированную высоту изображения */
+        border-radius: 50%; /* Округляем изображение */
+        margin-top: 0.1em; /* Уменьшенное расстояние */
+        object-fit: cover; /* Обеспечивает обрезку изображения для сохранения пропорций */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-position: center; /* Центрирование изображения */
+    }
     h1 {
     font-size: 1.4em; /* Уменьшенный размер */
     margin: 0.01em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
@@ -222,4 +233,13 @@ button.listen {
     .input-field button {
         width: 40%; /* Уменьшенная ширина кнопки поиска */
     }
+}
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Высота экрана */
+    text-align: center;
+    padding-top: 0.1px; /* Уменьшаем верхний отступ */
 }
