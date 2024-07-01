@@ -215,11 +215,11 @@ button.listen {
         display: flex;
         justify-content: center; /* Центрирование содержимого по горизонтали */
         align-items: center; /* Центрирование содержимого по вертикали */
-        width: 100%;
+        width: 10%;
         margin: 0 0 20px 0; /* Убираем отрицательный верхний отступ */
     }
     .input-field input {
-        width: 10%; /* Уменьшенная ширина строки поиска */
+        width: 60%; /* Уменьшенная ширина строки поиска */
         margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
     }
     .input-field button {
