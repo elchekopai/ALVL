@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -10,13 +11,6 @@ body {
     overflow: auto; /* Включаем прокрутку */
 }
 
-.container {
-    width: 100%;
-    max-width: 500px;
-    padding: 2px; /* Добавляем отступы для мобильной версии */
-    box-sizing: border-box; /* Учитываем отступы в ширину контейнера */
-}
-
 h1 {
     font-size: 2em; /* Уменьшенный размер */
     margin-bottom: 0.5em; /* Уменьшенное расстояние */
@@ -24,11 +18,25 @@ h1 {
     text-transform: uppercase; /* Капсом */
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого по горизонтали */
+    width: 20%;
+    max-width: 400px;
+    height: 80px; /* Фиксированная высота контейнера */
+    padding: 20px; /* Добавляем отступы для мобильной версии */
+    box-sizing: border-box; /* Учитываем отступы в ширину контейнера */
+    background-color: #1e1e1e; /* Темный фон контейнера */
+    border-radius: 25px; /* Скругленные углы контейнера */
+    justify-content: flex-start; /* Выравниваем содержимое по верхнему краю */
+}
+
 .input-field {
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: 20px; /* Добавляем отступы для мобильной версии */
+    margin: -10px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
 }
 
 .input-field input {
@@ -48,7 +56,7 @@ button {
     border: none;
     padding: 0 20px; /* Отступы по бокам */
     cursor: pointer;
-    border-radius: 0 50px 50px 0; /* Округлые края справа */
+    border-radius: 55px; /* Закругленные углы */
     height: 46px; /* Высота кнопки для выравнивания с полем ввода */
     display: flex;
     align-items: center;
