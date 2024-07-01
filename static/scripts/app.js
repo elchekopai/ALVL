@@ -35,8 +35,8 @@ function displayArtist(data) {
     resultsDiv.innerHTML = `
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name} <span class="popularity">(${data.popularity})</span></h2>
-        <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
         <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
+        <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
         <h3 id="top-tracks">Top Tracks</h3>
         <table>
             ${data.top_tracks.map(track => `

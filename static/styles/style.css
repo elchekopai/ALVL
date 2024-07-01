@@ -62,22 +62,30 @@ button {
     align-items: center;
     justify-content: center;
 }
-
 #results img {
-    max-width: 100%; /* Увеличенный размер изображения */
-    border-radius: 50%;
-    margin-top: 0.5em; /* Уменьшенное расстояние */
+    width: 300px; /* Устанавливаем фиксированную ширину изображения */
+    height: 300px; /* Устанавливаем фиксированную высоту изображения */
+    border-radius: 50%; /* Округляем изображение */
+    margin-top: 0.1em; /* Уменьшенное расстояние */
+    object-fit: cover; /* Обеспечивает обрезку изображения для сохранения пропорций */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 #results h2 {
     font-size: 2em; /* Размер текста для имени артиста */
     color: #1db954; /* Зеленый цвет */
-    padding: 0.01px;
-    margin-top: 0.1em; /* Уменьшенное расстояние */
+    padding: 0.1px;
+    margin: 0.5em 0 0.2em 0; /* Уменьшенное расстояние сверху и снизу */
+    text-align: center; /* Центрирование текста */
 }
 
 #results p {
-    margin: 0.5em 0; /* Увеличенное расстояние между текстовыми элементами */
+    margin: 0.1em 0; /* Уменьшаем верхний и нижний отступы */
+    text-align: center; /* Центрирование текста */
+    color: #b3b3b3; /* Серый цвет текста */
+    padding: 0; /* Убираем отступы */
+    font-size: 1.2em; /* Увеличиваем размер текста */
 }
 
 #top-tracks {
@@ -85,6 +93,7 @@ button {
     font-size: 1.2em;
     color: #535353; /* Темно-серый цвет */
     margin-bottom: 0.5em;
+    text-align: center; /* Центрирование текста */
 }
 
 table {
