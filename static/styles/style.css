@@ -22,20 +22,21 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center; /* Центрирование содержимого по горизонтали */
-    width: 90%;
-    max-width: 500px;
-    padding: 20px; /* Добавляем отступы для мобильной версии */
+    width: 100%;
+    max-width: 400px;
+    padding: 1px 20px; /* Уменьшаем отступы */
     box-sizing: border-box; /* Учитываем отступы в ширину контейнера */
     background-color: #1e1e1e; /* Темный фон контейнера */
     border-radius: 25px; /* Скругленные углы контейнера */
-    margin-bottom: 20px; /* Отступ снизу */
+    justify-content: center; /* Центрируем содержимое по вертикали */
 }
 
 .input-field {
     display: flex;
     align-items: center;
-    width: 100%; /* Ширина input-field равна ширине контейнера */
-    margin-bottom: 20px; /* Отступ снизу */
+    position: relative;
+    margin: 0; /* Убираем отступы */
+    width: 100%; /* Задаем ширину в 100% */
 }
 
 .input-field input {
