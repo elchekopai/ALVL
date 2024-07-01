@@ -55,6 +55,16 @@ button {
     justify-content: center;
 }
 
+.listen-button {
+    background-color: #1db954; /* Зеленая кнопка */
+    color: #121212; /* Черный цвет текста */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
 #results img {
     max-width: 100%; /* Увеличенный размер изображения */
     border-radius: 50%;
@@ -93,6 +103,26 @@ table, th, td {
 th, td {
     padding: 0.5em;
     text-align: left;
+}
+
+.light-red {
+    color: #ffcccc; /* Светло-красный цвет */
+}
+
+.white {
+    color: #ffffff; /* Белый цвет */
+}
+
+.light-yellow {
+    color: #ffffcc; /* Светло-желтый цвет */
+}
+
+.light-blue {
+    color: #cceeff; /* Светло-синий цвет */
+}
+
+.light-green {
+    color: #ccffcc; /* Светло-зеленый цвет */
 }
 
 .autocomplete-item {
