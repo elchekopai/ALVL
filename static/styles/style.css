@@ -16,6 +16,7 @@ h1 {
     margin-bottom: 0.5em; /* Уменьшенное расстояние */
     color: #1db954; /* Зеленый цвет */
     text-transform: uppercase; /* Капсом */
+    text-align: center; /* Центрирование текста */
 }
 
 .container {
@@ -190,14 +191,9 @@ button.listen {
     .container {
         width: 90%;
         padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Центрирование содержимого по горизонтали */
     }
     h1 {
-        font-size: 1.7em; /* Уменьшенный размер */
-        text-align: center; /* Центрирование текста */
-        width: 100%; /* Добавляем ширину для центрирования */
+    font-size: 1.7em; /* Уменьшенный размер */
     }
     #results {
         width: 90%;
@@ -214,7 +210,7 @@ button.listen {
         justify-content: center; /* Центрирование содержимого по горизонтали */
         align-items: center; /* Центрирование содержимого по вертикали */
         width: 90%;
-        margin: 0 auto 20px auto; /* Центрирование и убираем отрицательный верхний отступ */
+        margin: 0 0 20px 0; /* Убираем отрицательный верхний отступ */
     }
     .input-field input {
         width: 60%; /* Уменьшенная ширина строки поиска */
