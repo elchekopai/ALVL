@@ -197,3 +197,15 @@ button.listen {
     color: #b3b3b3; /* Серый цвет текста */
     margin: 0; /* Убираем отступы */
 }
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    .input-field input, button {
+        font-size: 1em; /* Уменьшаем размер текста */
+    }
+    #results {
+        padding: 10px;
+    }
+}
