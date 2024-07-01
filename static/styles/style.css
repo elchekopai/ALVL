@@ -31,23 +31,26 @@ h1 {
     border-radius: 25px; /* Скругленные углы контейнера */
     justify-content: flex-start; /* Выравниваем содержимое по верхнему краю */
 }
+
 .input-field {
     display: flex;
     align-items: center;
-    justify-content: center; /* Центрирование по горизонтали */
-    width: 100%; /* Занять всю доступную ширину */
     position: relative;
     margin: -10px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
 }
 
 .input-field input {
+    font-size: 1.2em; /* Уменьшенный размер */
+    color: #b3b3b3;
+    background-color: #212121; /* Темно-серый фон */
+    border: 2px solid #1db954; /* Зеленая рамка */
+    border-radius: 50px 0 0 50px; /* Округлые края слева */
+    padding: 0 20px; /* Добавляем отступы */
+    height: 46px; /* Высота для выравнивания с кнопкой */
     flex-grow: 1; /* Растягиваем на доступную ширину */
-    margin-right: 10px; /* Отступ между полем ввода и кнопкой */
-    max-width: calc(100% - 100px); /* Учитываем ширину кнопки */
 }
 
 button {
-    width: 90px; /* Устанавливаем фиксированную ширину для кнопки */
     background-color: #1db954; /* Зеленая кнопка */
     color: #121212; /* Черный цвет текста */
     border: none;
@@ -195,17 +198,21 @@ button.listen {
     margin: 0; /* Убираем отступы */
 }
 @media (max-width: 600px) {
-    .container {
-        width: 90%;
-        padding: 10px;
+    .input-field {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Разделение элементов */
+        width: 100%; /* Занять всю доступную ширину */
+        position: relative;
+        margin: -10px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
     }
-    #results {
-        width: 90%;
-        padding: 10px;
-        margin-top: 10px;
+
+    .input-field input {
+        width: 70%; /* Занимает 70% ширины контейнера */
+        margin-right: 10px; /* Отступ между полем ввода и кнопкой */
     }
-    .error-message {
-        padding: 100px;
-        text-align: center;
+
+    .input-field button {
+        width: 28%; /* Занимает 28% ширины контейнера */
     }
 }
