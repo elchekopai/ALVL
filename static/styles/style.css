@@ -157,3 +157,34 @@ button.listen {
     align-items: center;
     justify-content: center;
 }
+#results {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+    border-radius: 25px;
+    margin-top: 20px;
+    min-height: 20px; /* Фиксированная высота для блока с результатами */
+}
+#results.hidden {
+    display: none;
+}
+.error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.sad-face {
+    font-size: 3em; /* Размер смайлика */
+    margin-bottom: -0.2em; /* Уменьшенное расстояние между смайликом и текстом */
+}
+
+.error-message p {
+    font-size: 1.2em;
+    color: #b3b3b3; /* Серый цвет текста */
+    margin: 0; /* Убираем отступы */
+}

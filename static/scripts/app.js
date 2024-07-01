@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function searchArtist() {
+    clearResults(); // Очищаем результаты перед новым поиском
     const artistName = document.getElementById('artistName').value;
     fetch(`/api/search_artist?name=${artistName}`)
         .then(response => response.json())
@@ -34,8 +35,8 @@ function displayArtist(data) {
     resultsDiv.innerHTML = `
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name} <span class="popularity">(${data.popularity})</span></h2>
-        <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
         <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
+        <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
         <h3 id="top-tracks">Top Tracks</h3>
         <table>
             ${data.top_tracks.map(track => `
@@ -46,11 +47,24 @@ function displayArtist(data) {
             `).join('')}
         </table>
     `;
+    resultsDiv.classList.remove('hidden'); // Показываем блок с результатами
 }
 
 function displayError(message) {
     const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = `<p class="error">${message}</p>`;
+    resultsDiv.innerHTML = `
+        <div class="error-message">
+            <span class="sad-face">😢</span>
+            <p>пукпук-среньк</p>
+        </div>
+    `;
+    resultsDiv.classList.remove('hidden'); // Показываем блок с ошибкой
+}
+
+function clearResults() {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '';
+    resultsDiv.classList.add('hidden'); // Скрываем блок с результатами
 }
 
 function showSuggestions(query) {
