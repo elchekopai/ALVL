@@ -201,10 +201,11 @@ button.listen {
     .input-field {
         display: flex;
         align-items: center;
-        justify-content: space-between; /* Разделение элементов */
-        width: 100%; /* Занять всю доступную ширину */
+        justify-content: space-between;
+        width: 100%;
         position: relative;
-        margin: -10px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
+        margin: 0 0 20px 0; /* Убираем отрицательный верхний отступ */
+        padding: 0 10px; /* Добавляем отступы по бокам */
     }
 
     .input-field input {
