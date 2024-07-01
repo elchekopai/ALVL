@@ -33,10 +33,9 @@ function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
         <img src="${data.image}" alt="${data.name}">
-        <h2>${data.name}</h2>
-        <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">LISTEN</button>
+        <h2>${data.name} <span class="popularity">(${data.popularity})</span></h2>
         <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
-        <p class="popularity">Popularity: ${data.popularity}</p>
+        <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
         <h3 id="top-tracks">Top Tracks</h3>
         <table>
             ${data.top_tracks.map(track => `
@@ -52,14 +51,6 @@ function displayArtist(data) {
 function displayError(message) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `<p class="error">${message}</p>`;
-}
-
-function getPopularityClass(popularity) {
-    if (popularity < 10) return 'white';
-    if (popularity < 20) return 'light-red';
-    if (popularity < 50) return 'light-yellow';
-    if (popularity < 80) return 'light-blue';
-    return 'light-green';
 }
 
 function showSuggestions(query) {
@@ -88,5 +79,5 @@ function clearSuggestions() {
 function selectSuggestion(name) {
     document.getElementById('artistName').value = name;
     clearSuggestions();
-    searchArtist();  // Добавлено для автоматического поиска при выборе подсказки
+    searchArtist();  // Автоматический поиск при выборе подсказки
 }

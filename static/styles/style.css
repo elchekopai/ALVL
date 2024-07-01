@@ -12,8 +12,8 @@ body {
 
 .container {
     width: 100%;
-    max-width: 600px;
-    padding: 20px; /* Добавляем отступы для мобильной версии */
+    max-width: 500px;
+    padding: 2px; /* Добавляем отступы для мобильной версии */
     box-sizing: border-box; /* Учитываем отступы в ширину контейнера */
 }
 
@@ -62,10 +62,10 @@ button {
 }
 
 #results h2 {
-    font-size: 2em; /* Измените значение на желаемый размер */
+    font-size: 2em; /* Размер текста для имени артиста */
     color: #1db954; /* Зеленый цвет */
     padding: 0.01px;
-    margin-top: 0.3em; /* Уменьшенное расстояние */
+    margin-top: 0.1em; /* Уменьшенное расстояние */
 }
 
 #results p {
