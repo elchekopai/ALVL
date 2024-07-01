@@ -31,7 +31,6 @@ h1 {
     margin-bottom: 20px; /* Добавляем отступы для мобильной версии */
 }
 
-/* Изменяем ширину строки поиска */
 .input-field input {
     font-size: 1.2em; /* Уменьшенный размер */
     color: #b3b3b3;
@@ -41,8 +40,6 @@ h1 {
     padding: 0 20px; /* Добавляем отступы */
     height: 46px; /* Высота для выравнивания с кнопкой */
     flex-grow: 1; /* Растягиваем на доступную ширину */
-    width: 80%; /* Устанавливаем ширину строки поиска */
-    max-width: none; /* Убираем максимальную ширину */
 }
 
 button {
@@ -51,7 +48,7 @@ button {
     border: none;
     padding: 0 20px; /* Отступы по бокам */
     cursor: pointer;
-    border-radius: 50px 50px 50px 50px; /* Округлые края справа */
+    border-radius: 0 50px 50px 0; /* Округлые края справа */
     height: 46px; /* Высота кнопки для выравнивания с полем ввода */
     display: flex;
     align-items: center;
@@ -65,13 +62,14 @@ button {
 }
 
 #results h2 {
-    font-size: 2em; /* Уменьшенный размер */
+    font-size: 2em; /* Измените значение на желаемый размер */
     color: #1db954; /* Зеленый цвет */
-    margin-top: 0.5em; /* Уменьшенное расстояние */
+    padding: 0.01px;
+    margin-top: 0.3em; /* Уменьшенное расстояние */
 }
 
 #results p {
-    margin: 0.2em 0; /* Уменьшенное расстояние */
+    margin: 0.5em 0; /* Увеличенное расстояние между текстовыми элементами */
 }
 
 #top-tracks {
@@ -138,27 +136,16 @@ table td:last-child {
     background-color: #212121;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Центрируем содержимое по вертикали */
-    align-items: center; /* Центрируем содержимое по горизонтали */
-    min-height: 100vh; /* Высота контейнера равна высоте окна браузера */
-    padding: 20px; /* Добавляем отступы для мобильной версии */
-    box-sizing: border-box; /* Учитываем отступы в ширину контейнера */
-}
-
 button.listen {
-    margin-top: 10px; /* Увеличиваем отступ сверху для подъема кнопки */
-    margin-bottom: 10px; /* Можно также задать отступ снизу для более точной настройки положения */
+    margin: 10px auto; /* Отступы сверху и снизу, центрирование по горизонтали */
     background-color: #1db954; /* Зеленая кнопка */
     color: #121212; /* Черный цвет текста */
     border: none;
+    font-weight: bold; /* Жирный текст */
     padding: 10px 20px; /* Увеличиваем внутренние отступы для кнопки */
     cursor: pointer;
     border-radius: 14px; /* Округлые края */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
