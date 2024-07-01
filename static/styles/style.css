@@ -206,10 +206,10 @@ button.listen {
     }
     h1 {
     font-size: 1.4em; /* Уменьшенный размер */
-    margin: 0.1em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
+    margin: 0.4em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
     }
     #results {
-        width: 90%;
+        width: 96%;
         padding: 20px;
         margin-top: 10px;
         margin-bottom: 20px; /* Добавляем нижний отступ */
