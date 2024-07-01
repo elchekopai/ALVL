@@ -203,6 +203,12 @@ button.listen {
         padding: 10px;
     }
     #results {
+        width: 90%;
         padding: 10px;
+        margin-top: 10px;
+    }
+    .error-message {
+        padding: 10px;
+        text-align: center;
     }
 }
