@@ -42,9 +42,7 @@ h1 {
 .input-field input {
     font-size: 1.2em; /* Уменьшенный размер */
     color: #b3b3b3;
-    background-color: #212121; /* Темно-серый фон */
-    border: 2px solid #1db954; /* Зеленая рамка */
-    border-radius: 50px 0 0 50px; /* Округлые края слева */
+    border-radius: 25px; /* Скругленные углы контейнера */
     padding: 0 20px; /* Добавляем отступы */
     height: 46px; /* Высота для выравнивания с кнопкой */
     flex-grow: 1; /* Растягиваем на доступную ширину */
@@ -61,6 +59,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase; /* Капсом */
+    font-weight: bold; /* Жирный шрифт */
+    font-size: 0.8em; /* Размер текста */
 }
 #results img {
     width: 300px; /* Устанавливаем фиксированную ширину изображения */
@@ -124,21 +125,6 @@ th, td {
 .autocomplete-item:hover {
     background-color: #535353; /* Светло-серый фон при наведении */
 }
-
-#suggestions {
-    position: absolute;
-    top: 46px; /* Располагаем под полем ввода */
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background-color: #212121; /* Темно-серый фон */
-    color: #b3b3b3; /* Белый текст */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #535353; /* Граница */
-}
-
 #suggestions li {
     padding: 0.5em;
     cursor: pointer;
