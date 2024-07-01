@@ -47,21 +47,24 @@ h1 {
     height: 46px; /* Высота для выравнивания с кнопкой */
     flex-grow: 1; /* Растягиваем на доступную ширину */
 }
-
 button {
     background-color: #1db954; /* Зеленая кнопка */
     color: #121212; /* Черный цвет текста */
     border: none;
-    padding: 0 20px; /* Отступы по бокам */
+    padding: 16px; /* Отступы по бокам */
     cursor: pointer;
-    border-radius: 55px; /* Закругленные углы */
-    height: 40px; /* Высота кнопки для выравнивания с полем ввода */
+    border-radius: 25px; /* Скругленные углы контейнера */
+    height: 34px; /* Высота кнопки для выравнивания с полем ввода */
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase; /* Капсом */
     font-weight: bold; /* Жирный шрифт */
-    font-size: 0.8em; /* Размер текста */
+    font-size: 0.86em; /* Размер текста */
+}
+
+button i.material-icons {
+    margin-left: 2.5px; /* Отступ слева для иконки */
 }
 #results img {
     width: 300px; /* Устанавливаем фиксированную ширину изображения */
