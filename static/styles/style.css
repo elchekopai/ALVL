@@ -199,6 +199,7 @@ button.listen {
         width: 90%;
         padding: 20px;
         margin-top: 10px;
+        margin-bottom: 20px; /* Добавляем нижний отступ */
     }
     .error-message {
         padding: 100px;
