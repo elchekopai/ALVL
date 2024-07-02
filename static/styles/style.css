@@ -340,10 +340,10 @@ button.listen {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .container {
         width: 100%;
-        padding: 7px;
+        padding: 10px;
     }
     #results img {
         width: 240px; /* Устанавливаем фиксированную ширину изображения */
@@ -360,7 +360,7 @@ button.listen {
         width: 100%;
         padding: 14px;
         margin-top: 12px;
-        margin-bottom: 1px; /* Добавляем нижний отступ */
+        margin-bottom: 10px; /* Добавляем нижний отступ */
     }
     .error-message {
         padding: 10px;
