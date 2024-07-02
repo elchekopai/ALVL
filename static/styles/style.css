@@ -30,6 +30,7 @@ body {
     align-items: center;
     position: relative;
     margin: -8px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
+    width: 90%;
 }
 .input-field input {
     font-size: 1.2em; /* Уменьшенный размер */
@@ -43,7 +44,7 @@ body {
     box-shadow: none; /* Убираем тень */
     vertical-align: middle; /* Вертикальное выравнивание текста */
     position: relative; /* Устанавливаем относительное позиционирование */
-    top: 4px; /* Сдвиг текста вниз */
+    top: 6px; /* Сдвиг текста вниз */
 }
 
 .input-field .validate:focus,
@@ -267,7 +268,7 @@ button.listen {
         display: flex;
         justify-content: center; /* Центрирование содержимого по горизонтали */
         align-items: center; /* Центрирование содержимого по вертикали */
-        width: 86%;
+        width: 100%;
         margin: 4px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
     }
     .input-field input {
@@ -275,7 +276,7 @@ button.listen {
         margin-right: 50px; /* Отступ между строкой поиска и кнопкой */
     }
     .input-field button {
-        width: 60%; /* Уменьшенная ширина кнопки поиска */
+        width: 30%; /* Уменьшенная ширина кнопки поиска */
     }
 }
 .container-wrapper {
