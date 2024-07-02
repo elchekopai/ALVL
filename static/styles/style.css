@@ -271,11 +271,11 @@ button.listen {
         display: flex;
         justify-content: center; /* Центрирование содержимого по горизонтали */
         align-items: center; /* Центрирование содержимого по вертикали */
-        width: 96%;
+        width: 90%;
         margin: 4px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
     }
     .input-field input {
-        width: 600%; /* Уменьшенная ширина строки поиска */
+        width: 60%; /* Уменьшенная ширина строки поиска */
         margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
     }
     .input-field button {
