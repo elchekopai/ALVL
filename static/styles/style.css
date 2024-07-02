@@ -359,8 +359,8 @@ button.listen {
     #results {
         width: 100%;
         padding: 20px;
-        margin-top: 10px;
-        margin-bottom: 10px; /* Добавляем нижний отступ */
+        margin-top: 12px;
+        margin-bottom: 1px; /* Добавляем нижний отступ */
     }
     .error-message {
         padding: 10px;
