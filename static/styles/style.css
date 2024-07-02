@@ -190,7 +190,7 @@ button.listen {
 
 @media (max-width: 600px) {
     .container {
-        width: 98%;
+        width: 96%;
         padding: 10px;
     }
     #results img {
@@ -209,10 +209,10 @@ button.listen {
     margin: 0.4em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
     }
     #results {
-        width: 98%;
+        width: 96%;
         padding: 20px;
         margin-top: 10px;
-        margin-bottom: 20px; /* Добавляем нижний отступ */
+        margin-bottom: 14px; /* Добавляем нижний отступ */
     }
     .error-message {
         padding: 100px;
@@ -222,7 +222,7 @@ button.listen {
         display: flex;
         justify-content: center; /* Центрирование содержимого по горизонтали */
         align-items: center; /* Центрирование содержимого по вертикали */
-        width: 98%;
+        width: 96%;
         margin: 0 0 20px 0; /* Убираем отрицательный верхний отступ */
     }
     .input-field input {
