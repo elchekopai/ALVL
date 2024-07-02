@@ -49,6 +49,9 @@ h1 {
     border: none; /* Убираем рамку */
     outline: none; /* Убираем линию фокуса */
     box-shadow: none; /* Убираем тень */
+    vertical-align: middle; /* Вертикальное выравнивание текста */
+    position: relative; /* Устанавливаем относительное позиционирование */
+    top: 4px; /* Сдвиг текста вниз */
 }
 
 .input-field .validate:focus,
@@ -57,13 +60,8 @@ h1 {
 .input-field .validate:invalid {
     border: none !important; /* Убираем рамку */
     box-shadow: none !important; /* Убираем тень */
-    color: #b3b3b3 !important; /* Устанавливаем серый цвет текста */
 }
-.input-field input::placeholder {
-    position: relative;
-    top: 3px; /* Сдвиг текста вниз */
-    color: #b3b3b3; /* Цвет текста */
-}
+
 
 button {
     background-color: #1db954; /* Зеленая кнопка */
