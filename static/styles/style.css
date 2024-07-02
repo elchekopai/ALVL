@@ -280,7 +280,7 @@ button.listen {
     }
     .input-field button {
         width: 30%; /* Уменьшенная ширина кнопки поиска */
-         margin-right: 50px; /* Отступ между строкой поиска и кнопкой */
+         margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
     }
 }
 .full-width {
