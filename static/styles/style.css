@@ -205,15 +205,15 @@ button.listen {
 .level-bar-container {
     width: 100%;
     background-color: #333; /* Цвет фона полоски */
-    border-radius: 5px;
+    border-radius: 5px; /* Скругленные углы полоски */
     margin: 10px 0; /* Отступы сверху и снизу */
-    position: relative;
+    position: relative; /* Позиционирование для уровня текста */
 }
 
 .level-bar {
     height: 20px; /* Высота полоски */
     background-color: #1db954; /* Цвет заполненной части */
-    border-radius: 5px;
+    border-radius: 5px; /* Скругленные углы заполненной части */
     transition: width 0.3s ease; /* Анимация для плавного изменения ширины */
     display: flex;
     align-items: center;
@@ -223,18 +223,18 @@ button.listen {
 }
 
 .level-text {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 0;
-    left: 0;
-    height: 100%;
+    position: absolute; /* Абсолютное позиционирование для центрирования текста поверх полоски */
+    width: 100%; /* Ширина текста равна ширине контейнера */
+    text-align: center; /* Центрирование текста по горизонтали */
+    top: 0; /* Расположение текста по верхнему краю контейнера */
+    left: 0; /* Расположение текста по левому краю контейнера */
+    height: 100%; /* Высота текста равна высоте контейнера */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Вертикальное центрирование текста */
+    justify-content: center; /* Горизонтальное центрирование текста */
     color: white; /* Цвет текста */
-    font-weight: bold;
-    font-size: 0.8em; /* Добавьте это свойство для изменения размера текста */
+    font-weight: bold; /* Жирный текст */
+    font-size: 0.8em; /* Размер текста */
 }
 
 @media (max-width: 600px) {

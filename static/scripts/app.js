@@ -43,10 +43,10 @@ function displayArtist(data) {
     const levelText = getLevelText(data.popularity); // Текст уровня
     resultsDiv.innerHTML = `
         <img src="${data.image}" alt="${data.name}">
-        <h2>${data.name} <span class="popularity">(${data.popularity})</span></h2>
+        <h2>${data.name}</h2>
         <div class="level-bar-container">
             <div class="level-bar" style="width: ${levelBarWidth};">
-                <span class="level-text">${levelText}</span>
+                <span class="level-text">${data.popularity} - ${levelText}</span>
             </div>
         </div>
         <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
