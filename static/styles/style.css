@@ -285,24 +285,4 @@ button.listen {
 .full-width {
     width: 100%;
     max-width: 600px; /* Максимальная ширина контейнера */
-    padding: 0 10px; /* Отступы внутри контейнера */
-}
-
-@media (max-width: 600px) {
-    .full-width .input-field {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .full-width .input-field input {
-        flex: 1;
-        margin-right: 5px;
-        height: 46px; /* Высота поля ввода */
-    }
-    .full-width .input-field button {
-        flex: 0 0 auto;
-        width: auto;
-        height: 46px; /* Высота кнопки */
-        padding: 0 20px; /* Добавляем отступы внутри кнопки */
-    }
 }
