@@ -135,7 +135,10 @@ th, td {
     padding: 0.5em;
     text-align: left;
 }
-
+table td:last-child {
+    text-align: right; /* Выравнивание текста по правому краю */
+    padding-right: 10px; /* Добавляем отступ справа для дополнительного пространства */
+}
 .autocomplete-item {
     background-color: #212121; /* Темно-серый фон */
     color: #b3b3b3; /* Белый текст */
