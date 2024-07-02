@@ -43,7 +43,8 @@ function displayArtist(data) {
     const levelText = getLevelText(data.popularity); // Текст уровня
     const spotifyPlayer = `
         <iframe src="https://open.spotify.com/embed/artist/${data.id}" 
-            width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media">
+            width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" 
+            style="margin-top: 10px;"> <!-- Добавляем отступ сверху -->
         </iframe>
     `;
 
@@ -58,7 +59,7 @@ function displayArtist(data) {
         <p class="followers"><span class="emoji">👤</span> ${data.followers.toLocaleString()}</p>
         <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
         <h3 id="top-tracks">Top Tracks</h3>
-        <table>
+        <table id="top-tracks-table">
             ${data.top_tracks.map(track => `
                 <tr>
                     <td>${track.name}</td>
@@ -66,11 +67,10 @@ function displayArtist(data) {
                 </tr>
             `).join('')}
         </table>
-        ${spotifyPlayer}
+        <div class="spotify-player">${spotifyPlayer}</div>
     `;
     resultsDiv.classList.remove('hidden'); // Показываем блок с результатами
 }
-
 function displayError(message) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
