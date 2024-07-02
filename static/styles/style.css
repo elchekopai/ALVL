@@ -37,7 +37,7 @@ h1 {
     display: flex;
     align-items: center;
     position: relative;
-    margin: -10px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
+    margin: -8px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
 }
 
 .input-field input {
