@@ -343,7 +343,7 @@ button.listen {
 @media (max-width: 600px) {
     .container {
         width: 100%;
-        padding: 10px;
+        padding: 7px;
     }
     #results img {
         width: 240px; /* Устанавливаем фиксированную ширину изображения */
