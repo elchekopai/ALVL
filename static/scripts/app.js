@@ -32,9 +32,13 @@ function searchArtist() {
 
 function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
+    const levelBarWidth = `${data.popularity}%`; // Ширина полоски уровня
     resultsDiv.innerHTML = `
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name} <span class="popularity">(${data.popularity})</span></h2>
+        <div class="level-bar-container">
+            <div class="level-bar" style="width: ${levelBarWidth};"></div>
+        </div>
         <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
         <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
         <h3 id="top-tracks">Top Tracks</h3>

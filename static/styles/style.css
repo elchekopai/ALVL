@@ -248,12 +248,16 @@ button.listen {
         width: 40%; /* Уменьшенная ширина кнопки поиска */
     }
 }
-.container-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Высота экрана */
-    text-align: center;
-    padding-top: 0.1px; /* Уменьшаем верхний отступ */
+.level-bar-container {
+    width: 100%;
+    background-color: #333; /* Цвет фона полоски */
+    border-radius: 5px;
+    margin: 10px 0; /* Отступы сверху и снизу */
+}
+
+.level-bar {
+    height: 20px; /* Высота полоски */
+    background-color: #1db954; /* Цвет заполненной части */
+    border-radius: 5px;
+    transition: width 0.3s ease; /* Анимация для плавного изменения ширины */
 }
