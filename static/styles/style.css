@@ -194,12 +194,12 @@ button.listen {
 }
 
 .sad-face {
-    font-size: 1em; /* Размер смайлика */
+    font-size: 2em; /* Размер смайлика */
     margin-bottom: -0.2em; /* Уменьшенное расстояние между смайликом и текстом */
 }
 
 .error-message p {
-    font-size: 1em;
+    font-size: 1.4em;
     color: #b3b3b3; /* Серый цвет текста */
     margin: 0; /* Убираем отступы */
 }
