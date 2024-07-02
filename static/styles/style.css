@@ -286,4 +286,8 @@ button.listen {
     width: 96%;
     max-width: 600px; /* Максимальная ширина контейнера */
     margin: 0 auto; /* Центрирование контейнера */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-position: center; /* Центрирование изображения */
 }
