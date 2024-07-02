@@ -88,7 +88,7 @@ button i.material-icons {
 }
 #results h2 {
     font-size: 2em; /* Размер текста для имени артиста */
-    color: #1db954; /* Зеленый цвет */
+    color: #b3b3b3; /* Зеленый цвет */
     padding: 0.1px;
     margin: 0.5em 0 0.2em 0; /* Уменьшенное расстояние сверху и снизу */
     text-align: center; /* Центрирование текста */

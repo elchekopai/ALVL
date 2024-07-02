@@ -41,6 +41,12 @@ function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
     const levelBarWidth = `${data.popularity}%`; // Ширина полоски уровня
     const levelText = getLevelText(data.popularity); // Текст уровня
+    const spotifyPlayer = `
+        <iframe src="https://open.spotify.com/embed/artist/${data.id}" 
+            width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media">
+        </iframe>
+    `;
+
     resultsDiv.innerHTML = `
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name}</h2>
@@ -60,6 +66,7 @@ function displayArtist(data) {
                 </tr>
             `).join('')}
         </table>
+        ${spotifyPlayer}
     `;
     resultsDiv.classList.remove('hidden'); // Показываем блок с результатами
 }

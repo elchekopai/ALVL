@@ -56,7 +56,7 @@ def search_artist():
             "followers": artist_data['followers']['total'],
             "popularity": artist_data['popularity'],
             "image": artist_data['images'][0]['url'] if artist_data['images'] else '',
-            "top_tracks": [{"name": track['name'], "popularity": track['popularity']} for track in top_tracks]
+            "top_tracks": [{"name": track['name'], "popularity": track['popularity'], "id": track['id']} for track in top_tracks]
         }
 
         return jsonify(result)
