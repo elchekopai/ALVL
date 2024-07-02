@@ -119,11 +119,11 @@ table {
     background-color: #212121; /* Черный фон таблицы */
     color: #b3b3b3; /* Белый текст */
     margin-top: 0.1em;
-    border-radius: 15px; /* Закругляем углы таблицы */
+    border-radius: 14px; /* Закругляем углы таблицы */
     overflow: hidden; /* Обеспечиваем правильное отображение закругленных углов */
 }
 table td {
-    padding: 0.5em;
+    padding: 0.1em 1em; /* Добавляем отступы сверху/снизу и по бокам */
     text-align: left;
     white-space: nowrap; /* Запрещаем перенос текста */
     overflow: hidden; /* Скрываем текст, который не помещается */
@@ -132,12 +132,12 @@ table td {
 }
 
 th, td {
-    padding: 0.5em;
+    padding: 0.8em;
     text-align: left;
 }
 table td:last-child {
     text-align: right; /* Выравнивание текста по правому краю */
-    padding-right: 10px; /* Добавляем отступ справа для дополнительного пространства */
+    padding: 0.5em 1em; /* Добавляем отступы сверху/снизу и по бокам */
 }
 .autocomplete-item {
     background-color: #212121; /* Темно-серый фон */
