@@ -263,6 +263,7 @@ button.listen {
     .error-message {
         padding: 10px;
         text-align: center;
+        width: 100%;
     }
     .input-field {
         display: flex;
