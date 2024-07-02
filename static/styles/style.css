@@ -272,10 +272,10 @@ button.listen {
     }
     .input-field input {
         width: 40%; /* Уменьшенная ширина строки поиска */
-        margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
+        margin-right: 2px; /* Отступ между строкой поиска и кнопкой */
     }
     .input-field button {
-        width: 10%; /* Уменьшенная ширина кнопки поиска */
+        width: 30%; /* Уменьшенная ширина кнопки поиска */
     }
 }
 .container-wrapper {
