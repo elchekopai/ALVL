@@ -30,14 +30,24 @@ function searchArtist() {
         });
 }
 
+function getLevelText(popularity) {
+    if (popularity >= 80) return 'SUPER STAR 💎';
+    if (popularity >= 50) return 'STAR ⭐';
+    if (popularity >= 20) return 'ARTIST 😎';
+    return 'FRESHMAN 🎧';
+}
+
 function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
     const levelBarWidth = `${data.popularity}%`; // Ширина полоски уровня
+    const levelText = getLevelText(data.popularity); // Текст уровня
     resultsDiv.innerHTML = `
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name} <span class="popularity">(${data.popularity})</span></h2>
         <div class="level-bar-container">
-            <div class="level-bar" style="width: ${levelBarWidth};"></div>
+            <div class="level-bar" style="width: ${levelBarWidth};">
+                <span class="level-text">${levelText}</span>
+            </div>
         </div>
         <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
         <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
@@ -58,7 +68,7 @@ function displayError(message) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
         <div class="error-message">
-            <span class="sad-face">😢</span>
+            <span class="sad-face">𓂸</span>
             <p>пукпук-среньк</p>
         </div>
     `;
