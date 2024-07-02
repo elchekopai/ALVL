@@ -95,7 +95,7 @@ button i.material-icons {
 }
 
 #results p {
-    margin: 0.1em 0; /* Уменьшаем верхний и нижний отступы */
+    margin: 0.5em 0; /* Уменьшаем верхний и нижний отступы */
     text-align: center; /* Центрирование текста */
     color: #b3b3b3; /* Серый цвет текста */
     padding: 0; /* Убираем отступы */
@@ -162,7 +162,7 @@ table td:last-child {
 }
 
 button.listen {
-    margin: 6px auto 0.1em auto; /* Отступы сверху и снизу, центрирование по горизонтали */
+    margin: 10px auto 0.1em auto; /* Отступы сверху и снизу, центрирование по горизонтали */
     background-color: #1db954; /* Зеленая кнопка */
     color: #121212; /* Черный цвет текста */
     border: none;
