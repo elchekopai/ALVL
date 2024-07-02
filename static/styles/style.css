@@ -257,7 +257,7 @@ button.listen {
         width: 100%;
         padding: 20px;
         margin-top: 10px;
-        margin-bottom: 20px; /* Добавляем нижний отступ */
+        margin-bottom: 16px; /* Добавляем нижний отступ */
     }
     .error-message {
         padding: 10px;
@@ -271,11 +271,11 @@ button.listen {
         margin: 4px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
     }
     .input-field input {
-        width: 20%; /* Уменьшенная ширина строки поиска */
+        width: 40%; /* Уменьшенная ширина строки поиска */
         margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
     }
     .input-field button {
-        width: 30%; /* Уменьшенная ширина кнопки поиска */
+        width: 10%; /* Уменьшенная ширина кнопки поиска */
     }
 }
 .container-wrapper {
