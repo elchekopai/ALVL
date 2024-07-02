@@ -199,7 +199,7 @@ button.listen {
 }
 
 .error-message p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #b3b3b3; /* Серый цвет текста */
     margin: 0; /* Убираем отступы */
 }
@@ -263,7 +263,6 @@ button.listen {
     .error-message {
         padding: 10px;
         text-align: center;
-        width: 80%;
     }
     .input-field {
         display: flex;
