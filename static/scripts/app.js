@@ -44,7 +44,7 @@ function displayArtist(data) {
     const spotifyPlayer = `
         <iframe src="https://open.spotify.com/embed/artist/${data.id}" 
             width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" 
-            style="margin-top: 16px; margin-bottom: 4px;"> <!-- Добавляем отступ сверху -->
+            style="margin-top: 16px; margin-bottom: -10px;"> <!-- Добавляем отступ сверху -->
         </iframe>
     `;
 
