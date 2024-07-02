@@ -243,48 +243,6 @@ button.listen {
     font-size: 0.8em; /* Размер текста */
 }
 
-
-@media (max-width: 600px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-    #results img {
-        width: 240px; /* Устанавливаем фиксированную ширину изображения */
-        height: 240px; /* Устанавливаем фиксированную высоту изображения */
-        border-radius: 50%; /* Округляем изображение */
-        margin-top: 0.1em; /* Уменьшенное расстояние */
-        object-fit: cover; /* Обеспечивает обрезку изображения для сохранения пропорций */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        object-position: center; /* Центрирование изображения */
-    }
-    #results {
-        width: 100%;
-        padding: 20px;
-        margin-top: 4px;
-        margin-bottom: 14px; /* Добавляем нижний отступ */
-    }
-    .error-message {
-        padding: 10px;
-        text-align: center;
-    }
-    .input-field {
-        display: flex;
-        justify-content: center; /* Центрирование содержимого по горизонтали */
-        align-items: center; /* Центрирование содержимого по вертикали */
-        width: 90%;
-        margin: 4px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
-    }
-    .input-field input {
-        width: 40%; /* Уменьшенная ширина строки поиска */
-        margin-right: 50px; /* Отступ между строкой поиска и кнопкой */
-    }
-    .input-field button {
-        width: 40%; /* Уменьшенная ширина кнопки поиска */
-    }
-}
 .container-wrapper {
     display: flex;
     flex-direction: column;
@@ -381,3 +339,45 @@ button.listen {
     margin-top: -8px;  /* Отступ сверху */
 }
 
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    #results img {
+        width: 240px; /* Устанавливаем фиксированную ширину изображения */
+        height: 240px; /* Устанавливаем фиксированную высоту изображения */
+        border-radius: 50%; /* Округляем изображение */
+        margin-top: 0.1em; /* Уменьшенное расстояние */
+        object-fit: cover; /* Обеспечивает обрезку изображения для сохранения пропорций */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-position: center; /* Центрирование изображения */
+    }
+    #results {
+        width: 100%;
+        padding: 20px;
+        margin-top: 4px;
+        margin-bottom: 14px; /* Добавляем нижний отступ */
+    }
+    .error-message {
+        padding: 10px;
+        text-align: center;
+    }
+    .input-field {
+        display: flex;
+        justify-content: center; /* Центрирование содержимого по горизонтали */
+        align-items: center; /* Центрирование содержимого по вертикали */
+        width: 90%;
+        margin: 4px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
+    }
+    .input-field input {
+        width: 40%; /* Уменьшенная ширина строки поиска */
+        margin-right: 50px; /* Отступ между строкой поиска и кнопкой */
+    }
+    .input-field button {
+        width: 40%; /* Уменьшенная ширина кнопки поиска */
+    }
+}
