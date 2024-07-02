@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     input.addEventListener('input', function(event) {
         showSuggestions(event.target.value);
     });
+
+    // Плавное появление строки поиска при загрузке страницы
+    const searchContainer = document.querySelector('.container.full-width');
+    searchContainer.classList.remove('hidden');
 });
 
 function searchArtist() {
@@ -69,8 +73,9 @@ function displayArtist(data) {
         </table>
         <div class="spotify-player">${spotifyPlayer}</div>
     `;
-    resultsDiv.classList.remove('hidden'); // Показываем блок с результатами
+    resultsDiv.classList.remove('hidden');
 }
+
 function displayError(message) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
@@ -79,7 +84,7 @@ function displayError(message) {
             <p>звуки марса</p>
         </div>
     `;
-    resultsDiv.classList.remove('hidden'); // Показываем блок с ошибкой
+    resultsDiv.classList.remove('hidden');
 }
 
 function clearResults() {

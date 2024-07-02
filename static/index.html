@@ -12,7 +12,7 @@
     <div class="container-wrapper">
         <div class="container center-align full-width">
             <div class="row input-field">
-                <input type="text" id="artistName" placeholder="Enter Artist Name" class="validate">
+                <input type="text" id="artistName" placeholder="Enter Artist Name" class="validate fade-in">
                 <button class="search-btn" onclick="searchArtist()">
                     Search
                     <i class="material-icons right">search</i>
@@ -20,9 +20,8 @@
                 <ul id="suggestions"></ul>
             </div>
         </div>
-        <div id="results" class="section hidden"></div>
-        <!-- Добавляем место для Spotify плеера -->
-        <div id="spotify-player" class="spotify-player"></div>
+        <div id="results" class="section fade-in hidden"></div>
+        <div id="spotify-player" class="spotify-player fade-in hidden"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/app.js"></script>

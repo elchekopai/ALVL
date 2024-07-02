@@ -295,3 +295,16 @@ button.listen {
     margin: 0 auto; /* Центрируем контейнер */
     padding: 10px; /* Добавляем внутренние отступы */
 }
+/* АНИМАЦИЯ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
