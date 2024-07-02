@@ -39,15 +39,32 @@ h1 {
     position: relative;
     margin: -8px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
 }
-
 .input-field input {
     font-size: 1.2em; /* Уменьшенный размер */
     color: #b3b3b3;
     border-radius: 25px; /* Скругленные углы контейнера */
-    padding: 0 20px; /* Добавляем отступы */
+    padding: 0px 20px; /* Добавляем отступы */
     height: 46px; /* Высота для выравнивания с кнопкой */
     flex-grow: 1; /* Растягиваем на доступную ширину */
+    border: none; /* Убираем рамку */
+    outline: none; /* Убираем линию фокуса */
+    box-shadow: none; /* Убираем тень */
 }
+
+.input-field .validate:focus,
+.input-field .validate:active,
+.input-field .validate:valid,
+.input-field .validate:invalid {
+    border: none !important; /* Убираем рамку */
+    box-shadow: none !important; /* Убираем тень */
+    color: #b3b3b3 !important; /* Устанавливаем серый цвет текста */
+}
+.input-field input::placeholder {
+    position: relative;
+    top: 3px; /* Сдвиг текста вниз */
+    color: #b3b3b3; /* Цвет текста */
+}
+
 button {
     background-color: #1db954; /* Зеленая кнопка */
     color: #121212; /* Черный цвет текста */
