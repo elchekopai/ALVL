@@ -72,7 +72,7 @@ function displayArtist(data) {
         <h2>${data.name}</h2>
         <div class="level-bar-container">
             <div class="level-bar" style="--bar-width: ${levelBarWidth};">
-                <span class="level-text">${data.popularity} - ${levelText}</span>
+                <span class="level-text">${data.popularity} ${levelText}</span>
             </div>
         </div>
         <p class="followers"><span class="emoji">👤</span> <span class="follower-count" data-followers="${data.followers}">0</span></p>
