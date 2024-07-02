@@ -99,9 +99,11 @@ button i.material-icons {
     text-align: center; /* Центрирование текста */
     color: #b3b3b3; /* Серый цвет текста */
     padding: 0; /* Убираем отступы */
-    font-size: 1.2em; /* Увеличиваем размер текста */
+    font-size: 1.1em; /* Увеличиваем размер текста */
 }
-
+.followers .emoji {
+    font-size: 0.76em; /* Измените этот размер на нужный вам */
+}
 #top-tracks {
     text-transform: uppercase;
     font-size: 1.2em;

@@ -49,7 +49,7 @@ function displayArtist(data) {
                 <span class="level-text">${data.popularity} - ${levelText}</span>
             </div>
         </div>
-        <p class="followers">Followers: ${data.followers.toLocaleString()}</p>
+        <p class="followers"><span class="emoji">👤</span> ${data.followers.toLocaleString()}</p>
         <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
         <h3 id="top-tracks">Top Tracks</h3>
         <table>
