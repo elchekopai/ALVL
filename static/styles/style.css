@@ -275,7 +275,7 @@ button.listen {
         margin-right: 50px; /* Отступ между строкой поиска и кнопкой */
     }
     .input-field button {
-        width: 30%; /* Уменьшенная ширина кнопки поиска */
+        width: 60%; /* Уменьшенная ширина кнопки поиска */
     }
 }
 .container-wrapper {
