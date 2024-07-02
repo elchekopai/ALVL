@@ -340,10 +340,10 @@ button.listen {
 }
 
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
     .container {
         width: 100%;
-        padding: 10px;
+        padding: 20px;
     }
     #results img {
         width: 240px; /* Устанавливаем фиксированную ширину изображения */
