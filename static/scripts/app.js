@@ -35,10 +35,10 @@ function searchArtist() {
 }
 
 function getLevelText(popularity) {
-    if (popularity >= 80) return 'SUPER STAR 💎';
-    if (popularity >= 50) return 'STAR ⭐';
-    if (popularity >= 20) return 'ARTIST 😎';
-    return 'FRESHMAN 🎧';
+    if (popularity >= 80) return 'SUPER STAR';
+    if (popularity >= 50) return 'STAR';
+    if (popularity >= 20) return 'ARTIST';
+    return 'FRESHMAN';
 }
 
 // Добавил эту функцию
@@ -54,8 +54,6 @@ function animateFollowerCount(element, target) {
         element.textContent = Math.floor(count).toLocaleString();
     }, 20);
 }
-
-// Вызвал функцию animateFollowerCount в displayArtist
 function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
     const levelBarWidth = `${data.popularity}%`;
@@ -68,11 +66,14 @@ function displayArtist(data) {
     `;
 
     resultsDiv.innerHTML = `
+        <div class="result-badge hidden">
+            <span class="result-text">${levelText}</span>
+        </div>
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name}</h2>
         <div class="level-bar-container">
             <div class="level-bar" style="--bar-width: ${levelBarWidth};">
-                <span class="level-text">${data.popularity} ${levelText}</span>
+                <span class="level-text" data-popularity="${data.popularity}">0</span>
             </div>
         </div>
         <p class="followers"><span class="emoji">👤</span> <span class="follower-count" data-followers="${data.followers}">0</span></p>
@@ -90,8 +91,30 @@ function displayArtist(data) {
     `;
     resultsDiv.classList.remove('hidden');
 
-    // Добавил этот вызов функции для анимации числа подписчиков
+    // Анимируем число подписчиков
     animateFollowerCount(document.querySelector('.follower-count'), data.followers);
+
+    // Анимируем число популярности
+    animatePopularityCount(document.querySelector('.level-text'), data.popularity);
+
+    // Показываем иконку уровня
+    const levelIcon = document.querySelector('.result-badge');
+    if (levelIcon) {
+        levelIcon.classList.remove('hidden');
+    }
+}
+
+function animatePopularityCount(element, target) {
+    let count = 0;
+    const step = target / 100;
+    const interval = setInterval(() => {
+        count += step;
+        if (count >= target) {
+            count = target;
+            clearInterval(interval);
+        }
+        element.textContent = Math.floor(count);
+    }, 20);
 }
 
 function displayError(message) {

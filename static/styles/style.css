@@ -243,6 +243,7 @@ button.listen {
     font-size: 0.8em; /* Размер текста */
 }
 
+
 @media (max-width: 600px) {
     .container {
         width: 100%;
@@ -337,5 +338,46 @@ button.listen {
     margin: 10px 0;
     position: relative;
 }
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+#results {
+    position: relative; /* Добавьте это для установления контекста позиционирования */
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+    border-radius: 25px;
+    margin-top: 20px;
+    min-height: 20px; /* Фиксированная высота для блока с результатами */
+}
+.result-badge {
+    position: absolute;
+    top: 0px;  /* Подвинуть вверх */
+    left: 0px;  /* Подвинуть влево */
+    background-color: #1db954;  /* Зеленый цвет */
+    width: 70px;  /* Фиксированная ширина */
+    height: 70px;  /* Фиксированная высота */
+    border-radius: 22px 0px 82px 0px;  /* Скругление углов */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;  /* Уменьшенные отступы */
+    box-sizing: border-box;  /* Учитываем отступы в размере блока */
+    text-align: center;  /* Центрирование текста по горизонтали */
+    line-height: 1.2;  /* Регулирует межстрочный интервал */
+}
 
+.result-text {
+    font-size: 0.5em;  /* Размер текста */
+    font-weight: bold;  /* Жирный текст */
+    color: white;  /* Цвет текста */
+    line-height: 1.2;  /* Регулирует межстрочный интервал */
+    word-wrap: break-word;  /* Перенос слов */
+    word-break: break-all;  /* Принудительный перенос слов */
+    margin-left: -9px;  /* Отступ слева */
+    margin-top: -8px;  /* Отступ сверху */
+}
 
