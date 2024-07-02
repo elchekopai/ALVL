@@ -280,11 +280,10 @@ button.listen {
     }
     .input-field button {
         width: 30%; /* Уменьшенная ширина кнопки поиска */
-        margin: 4px 0 20px 0;
     }
 }
 .full-width {
-    width: 100%;
+    width: 120%;
     max-width: 440px; /* Максимальная ширина контейнера */
     margin: 0 auto; /* Центрирование контейнера */
 }
