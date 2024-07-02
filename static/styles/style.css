@@ -271,7 +271,7 @@ button.listen {
         display: flex;
         justify-content: center; /* Центрирование содержимого по горизонтали */
         align-items: center; /* Центрирование содержимого по вертикали */
-        width: 96%;
+        width: 90%;
         margin: 4px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
     }
     .input-field input {
