@@ -37,7 +37,7 @@ h1 {
     display: flex;
     align-items: center;
     position: relative;
-    margin: -8px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
+    margin: -10px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
 }
 
 .input-field input {
@@ -205,14 +205,14 @@ button.listen {
         object-position: center; /* Центрирование изображения */
     }
     h1 {
-        font-size: 1.4em; /* Уменьшенный размер */
-        margin: 0.4em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
+    font-size: 1.4em; /* Уменьшенный размер */
+    margin: 0.4em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
     }
     #results {
         width: 96%;
         padding: 20px;
         margin-top: 10px;
-        margin-bottom: 14px; /* Добавляем нижний отступ */
+        margin-bottom: 20px; /* Добавляем нижний отступ */
     }
     .error-message {
         padding: 100px;
@@ -223,29 +223,22 @@ button.listen {
         justify-content: center; /* Центрирование содержимого по горизонтали */
         align-items: center; /* Центрирование содержимого по вертикали */
         width: 96%;
-        margin
-
-    #results {
-    width: 96%;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 14px; /* Добавляем нижний отступ */
-    }
-    .error-message {
-    padding: 100px;
-    text-align: center;
-    }
-    .input-field {
-    display: flex;
-    justify-content: center; /* Центрирование содержимого по горизонтали */
-    align-items: center; /* Центрирование содержимого по вертикали */
-    width: 94%;
-    margin: 10px 0 20px 0; /* Уменьшаем верхний отступ и оставляем нижний отступ */
+        margin: 0 0 20px 0; /* Убираем отрицательный верхний отступ */
     }
     .input-field input {
-    width: 70%; /* Уменьшенная ширина строки поиска */
-    margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
+        width: 60%; /* Уменьшенная ширина строки поиска */
+        margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
     }
     .input-field button {
-    width: 30%; /* Уменьшенная ширина кнопки поиска */
+        width: 40%; /* Уменьшенная ширина кнопки поиска */
+    }
+}
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Высота экрана */
+    text-align: center;
+    padding-top: 0.1px; /* Уменьшаем верхний отступ */
 }
