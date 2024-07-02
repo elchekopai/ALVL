@@ -68,8 +68,8 @@ function displayError(message) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
         <div class="error-message">
-            <span class="sad-face">𓂸</span>
-            <p>пукпук-среньк</p>
+            <span class="sad-face">▶︎ •၊၊||၊|။||||| 0:10</span>
+            <p>звуки марса</p>
         </div>
     `;
     resultsDiv.classList.remove('hidden'); // Показываем блок с ошибкой
