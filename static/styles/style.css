@@ -308,3 +308,34 @@ button.listen {
 .fade-in {
     animation: fadeIn 1s ease-in-out forwards;
 }
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--bar-width);
+    }
+}
+
+.level-bar {
+    height: 20px;
+    background-color: #1db954;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    animation: fillBar 3s ease-in-out forwards;
+}
+
+.level-bar-container {
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    margin: 10px 0;
+    position: relative;
+}
+
+

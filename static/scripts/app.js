@@ -41,14 +41,29 @@ function getLevelText(popularity) {
     return 'FRESHMAN 🎧';
 }
 
+// Добавил эту функцию
+function animateFollowerCount(element, target) {
+    let count = 0;
+    const step = target / 100;
+    const interval = setInterval(() => {
+        count += step;
+        if (count >= target) {
+            count = target;
+            clearInterval(interval);
+        }
+        element.textContent = Math.floor(count).toLocaleString();
+    }, 20);
+}
+
+// Вызвал функцию animateFollowerCount в displayArtist
 function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
-    const levelBarWidth = `${data.popularity}%`; // Ширина полоски уровня
-    const levelText = getLevelText(data.popularity); // Текст уровня
+    const levelBarWidth = `${data.popularity}%`;
+    const levelText = getLevelText(data.popularity);
     const spotifyPlayer = `
         <iframe src="https://open.spotify.com/embed/artist/${data.id}" 
             width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" 
-            style="margin-top: 16px; margin-bottom: -12px;"> <!-- Добавляем отступ сверху -->
+            style="margin-top: 16px; margin-bottom: -12px;">
         </iframe>
     `;
 
@@ -56,11 +71,11 @@ function displayArtist(data) {
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name}</h2>
         <div class="level-bar-container">
-            <div class="level-bar" style="width: ${levelBarWidth};">
+            <div class="level-bar" style="--bar-width: ${levelBarWidth};">
                 <span class="level-text">${data.popularity} - ${levelText}</span>
             </div>
         </div>
-        <p class="followers"><span class="emoji">👤</span> ${data.followers.toLocaleString()}</p>
+        <p class="followers"><span class="emoji">👤</span> <span class="follower-count" data-followers="${data.followers}">0</span></p>
         <button class="listen" onclick="window.open('https://open.spotify.com/artist/${data.id}', '_blank')">Listen</button>
         <h3 id="top-tracks">Top Tracks</h3>
         <table id="top-tracks-table">
@@ -74,6 +89,9 @@ function displayArtist(data) {
         <div class="spotify-player">${spotifyPlayer}</div>
     `;
     resultsDiv.classList.remove('hidden');
+
+    // Добавил этот вызов функции для анимации числа подписчиков
+    animateFollowerCount(document.querySelector('.follower-count'), data.followers);
 }
 
 function displayError(message) {
