@@ -350,7 +350,7 @@ button.listen {
     box-sizing: border-box;
     background-color: #1e1e1e;
     border-radius: 25px;
-    margin-top: 20px;
+    margin-top: 16px;
     min-height: 20px; /* Фиксированная высота для блока с результатами */
 }
 .result-badge {
