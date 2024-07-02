@@ -342,7 +342,7 @@ button.listen {
 
 @media (max-width: 600px) {
     .container {
-        width: 110%;
+        width: 100%;
         padding: 10px;
     }
     #results img {
