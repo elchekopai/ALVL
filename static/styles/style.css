@@ -263,8 +263,8 @@ button.listen {
     #results {
         width: 100%;
         padding: 20px;
-        margin-top: 8px;
-        margin-bottom: 16px; /* Добавляем нижний отступ */
+        margin-top: 4px;
+        margin-bottom: 14px; /* Добавляем нижний отступ */
     }
     .error-message {
         padding: 10px;
