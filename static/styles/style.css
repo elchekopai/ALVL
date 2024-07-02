@@ -226,37 +226,26 @@ button.listen {
         margin
 
     #results {
-        width: 96%;
-        padding: 20px;
-        margin-top: 10px;
-        margin-bottom: 14px; /* Добавляем нижний отступ */
+    width: 96%;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 14px; /* Добавляем нижний отступ */
     }
     .error-message {
-        padding: 100px;
-        text-align: center;
+    padding: 100px;
+    text-align: center;
     }
     .input-field {
-        display: flex;
-        justify-content: center; /* Центрирование содержимого по горизонтали */
-        align-items: center; /* Центрирование содержимого по вертикали */
-        width: 96%;
-        margin: 4px 0 20px 0; /* Уменьшаем верхний отступ и оставляем нижний отступ */
-    }
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    width: 96%;
+    margin: 4px 0 20px 0; /* Уменьшаем верхний отступ и оставляем нижний отступ */
     }
     .input-field input {
-        width: 60%; /* Уменьшенная ширина строки поиска */
-        margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
+    width: 60%; /* Уменьшенная ширина строки поиска */
+    margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
     }
     .input-field button {
-        width: 40%; /* Уменьшенная ширина кнопки поиска */
-    }
-}
-.container-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Высота экрана */
-    text-align: center;
-    padding-top: 0.1px; /* Уменьшаем верхний отступ */
+    width: 40%; /* Уменьшенная ширина кнопки поиска */
 }
