@@ -357,7 +357,7 @@ button.listen {
         object-position: center; /* Центрирование изображения */
     }
     #results {
-        width: 100%;
+        width: 110%;
         padding: 14px;
         margin-top: 12px;
         margin-bottom: 10px; /* Добавляем нижний отступ */
