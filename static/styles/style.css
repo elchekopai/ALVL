@@ -358,7 +358,7 @@ button.listen {
     }
     #results {
         width: 100%;
-        padding: 20px;
+        padding: 14px;
         margin-top: 12px;
         margin-bottom: 1px; /* Добавляем нижний отступ */
     }
