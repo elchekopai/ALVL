@@ -239,7 +239,7 @@ button.listen {
 
 @media (max-width: 600px) {
     .container {
-        width: 96%;
+        width: 100%;
         padding: 10px;
     }
     #results img {
@@ -258,7 +258,7 @@ button.listen {
     margin: 0.4em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
     }
     #results {
-        width: 96%;
+        width: 100%;
         padding: 20px;
         margin-top: 10px;
         margin-bottom: 20px; /* Добавляем нижний отступ */
@@ -271,7 +271,7 @@ button.listen {
         display: flex;
         justify-content: center; /* Центрирование содержимого по горизонтали */
         align-items: center; /* Центрирование содержимого по вертикали */
-        width: 96%;
+        width: 100%;
         margin: 4px 0 20px 0; /* Отрицательный верхний отступ для поднятия элемента */
     }
     .input-field input {
