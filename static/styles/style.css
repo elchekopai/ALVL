@@ -236,7 +236,6 @@ button.listen {
     font-weight: bold; /* Жирный текст */
     font-size: 0.8em; /* Размер текста */
 }
-
 @media (max-width: 600px) {
     .container {
         width: 96%;
@@ -269,16 +268,18 @@ button.listen {
     }
     .input-field {
         display: flex;
-        justify-content: center; /* Центрирование содержимого по горизонтали */
+        justify-content: space-between; /* Равномерное распределение пространства между элементами */
         align-items: center; /* Центрирование содержимого по вертикали */
-        width: 96%;
+        width: 100%;
         margin: 4px 0 20px 0; /* Убираем отрицательный верхний отступ */
     }
     .input-field input {
-        width: calc(100% - 45px); /* Уменьшенная ширина строки поиска */
+        flex: 1; /* Растягиваем поле ввода на всю доступную ширину */
         margin-right: 5px; /* Отступ между строкой поиска и кнопкой */
+        height: 46px; /* Высота поля ввода */
     }
     .input-field button {
-        width: 40px; /* Уменьшенная ширина кнопки поиска */
+        flex-shrink: 0; /* Кнопка не сжимается */
+        height: 46px; /* Высота кнопки */
     }
 }
