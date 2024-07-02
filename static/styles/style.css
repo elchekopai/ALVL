@@ -11,14 +11,6 @@ body {
     overflow: auto; /* Включаем прокрутку */
 }
 
-h1 {
-    font-size: 1.4em; /* Уменьшенный размер */
-    margin: 0.01em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
-    color: #1db954; /* Зеленый цвет */
-    text-transform: uppercase; /* Капсом */
-    text-align: center; /* Центрирование текста */
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -70,13 +62,14 @@ button {
     padding: 16px; /* Отступы по бокам */
     cursor: pointer;
     border-radius: 25px; /* Скругленные углы контейнера */
-    height: 34px; /* Высота кнопки для выравнивания с полем ввода */
+    height: 36px; /* Высота кнопки для выравнивания с полем ввода */
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase; /* Капсом */
     font-weight: bold; /* Жирный шрифт */
     font-size: 0.86em; /* Размер текста */
+    margin: 0.5em 0 0.2em 0; /* Уменьшенное расстояние сверху и снизу */
 }
 
 button i.material-icons {
@@ -252,10 +245,6 @@ button.listen {
         margin-left: auto;
         margin-right: auto;
         object-position: center; /* Центрирование изображения */
-    }
-    h1 {
-    font-size: 1.4em; /* Уменьшенный размер */
-    margin: 0.4em 0 0.4em 0; /* Уменьшенное расстояние сверху и снизу */
     }
     #results {
         width: 100%;
