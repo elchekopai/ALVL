@@ -278,4 +278,7 @@ button.listen {
     align-items: center;
     min-height: 100vh; /* Высота экрана */
     text-align: center;
+    max-width: 400px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 10px; /* Добавляем внутренние отступы */
 }
