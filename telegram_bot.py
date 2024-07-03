@@ -19,7 +19,7 @@ async def start(update: Update, context: CallbackContext):
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        text="CHECK OUT AN ARTIST'S \nLEVEL ON SPOTIFY ✳️",
+        text="ALL AVAILABLE IN THE APP ✳️",
         reply_markup=reply_markup
     )
 
