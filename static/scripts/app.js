@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
         Telegram.WebApp.expand(); // Расширяем веб-приложение на весь экран
     }
 
-    const input = document.getElementById('artistName');
-    input.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            searchArtist();
-        }
+    const form = document.getElementById('searchForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращаем перезагрузку страницы
+        searchArtist();
+        input.blur(); // Скрываем клавиатуру
     });
 
+    const input = document.getElementById('artistName');
     input.addEventListener('input', function(event) {
         showSuggestions(event.target.value);
     });
