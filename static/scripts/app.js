@@ -46,6 +46,22 @@ function getLevelText(popularity) {
     return 'FRESHMAN';
 }
 
+function getRankingText(popularity) {
+    if (popularity >= 95) return 'TOP 1% IN THE WORLD';
+    if (popularity >= 90) return 'TOP 2% IN THE WORLD';
+    if (popularity >= 86) return 'TOP 3% IN THE WORLD';
+    if (popularity >= 80) return 'TOP 5% IN THE WORLD';
+    if (popularity >= 70) return 'TOP 10% IN THE WORLD';
+    if (popularity >= 60) return 'TOP 20% IN THE WORLD';
+    if (popularity >= 50) return 'TOP 30% IN THE WORLD';
+    if (popularity >= 41) return 'TOP 40% IN THE WORLD';
+    if (popularity >= 31) return 'TOP 50% IN THE WORLD';
+    if (popularity >= 21) return 'TOP 60% IN THE WORLD';
+    if (popularity >= 16) return 'TOP 70% IN THE WORLD';
+    if (popularity >= 10) return 'TOP 80% IN THE WORLD';
+    return 'TOP 90% IN THE WORLD';
+}
+
 // Добавил эту функцию
 function animateFollowerCount(element, target) {
     let count = 0;
@@ -64,6 +80,8 @@ function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
     const levelBarWidth = `${data.popularity}%`;
     const levelText = getLevelText(data.popularity);
+    const rankingText = getRankingText(data.popularity); // Получаем текст ранжирования
+
     const spotifyPlayer = `
         <iframe src="https://open.spotify.com/embed/artist/${data.id}" 
             width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" 
@@ -72,8 +90,15 @@ function displayArtist(data) {
     `;
 
     resultsDiv.innerHTML = `
-        <div class="result-badge hidden">
-            <span class="result-text">${levelText}</span>
+        <div class="left-badge hidden">
+            <span class="left-text">${levelText}</span>
+        </div>
+        <div class="right-badge hidden">
+            <div class="ranking-text">
+                <span class="top-percentage">${rankingText.split(' ')[0]} ${rankingText.split(' ')[1]}</span>
+                <br>
+                <span class="in-the-world">${rankingText.split(' ').slice(2).join(' ')}</span> <!-- IN THE WORLD -->
+            </div>
         </div>
         <img src="${data.image}" alt="${data.name}">
         <h2>${data.name}</h2>
@@ -103,10 +128,12 @@ function displayArtist(data) {
     // Анимируем число популярности
     animatePopularityCount(document.querySelector('.level-text'), data.popularity);
 
-    // Показываем иконку уровня
-    const levelIcon = document.querySelector('.result-badge');
-    if (levelIcon) {
-        levelIcon.classList.remove('hidden');
+    // Показываем иконки уровня
+    const leftIcon = document.querySelector('.result-badge.left');
+    const rightIcon = document.querySelector('.result-badge.right');
+    if (leftIcon && rightIcon) {
+        leftIcon.classList.remove('hidden');
+        rightIcon.classList.remove('hidden');
     }
 }
 

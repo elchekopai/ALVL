@@ -311,32 +311,76 @@ button.listen {
     margin-top: 17px;
     min-height: 20px; /* Фиксированная высота для блока с результатами */
 }
-.result-badge {
+.left-badge {
     position: absolute;
-    top: 0px;  /* Подвинуть вверх */
-    left: 0px;  /* Подвинуть влево */
-    background-color: #1db954;  /* Зеленый цвет */
-    width: 70px;  /* Фиксированная ширина */
-    height: 70px;  /* Фиксированная высота */
-    border-radius: 22px 0px 82px 0px;  /* Скругление углов */
+    top: 0px;
+    left: 0px;
+    background-color: #1db954;
+    width: 70px;
+    height: 70px;
+    border-radius: 22px 0px 82px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;  /* Уменьшенные отступы */
-    box-sizing: border-box;  /* Учитываем отступы в размере блока */
-    text-align: center;  /* Центрирование текста по горизонтали */
-    line-height: 1.2;  /* Регулирует межстрочный интервал */
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.2;
+    opacity: 0.8;
 }
 
-.result-text {
-    font-size: 0.5em;  /* Размер текста */
-    font-weight: bold;  /* Жирный текст */
-    color: white;  /* Цвет текста */
-    line-height: 1.2;  /* Регулирует межстрочный интервал */
-    word-wrap: break-word;  /* Перенос слов */
-    word-break: break-all;  /* Принудительный перенос слов */
-    margin-left: -9px;  /* Отступ слева */
-    margin-top: -8px;  /* Отступ сверху */
+.right-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #1db954;
+    width: 70px;
+    height: 70px;
+    border-radius: 0px 22px 0px 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.2;
+    opacity: 0.8;
+}
+
+.left-text {
+    font-size: 0.5em;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-left: -9px;
+    margin-top: -8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ranking-text {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    word-wrap: break-word;
+    margin-left: 10px;
+    margin-top: -8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.ranking-text .top-percentage {
+    display: inline-block; /* Отображаем TOP и процент в одной строке */
+    text-align: center;
+}
+
+.ranking-text .in-the-world {
+    display: block; /* Отображаем "IN THE WORLD" на новой строке */
+    margin-top: 0px; /* Можно настроить отступ, если требуется */
+    font-size: 0.5em;
+    text-align: center;
 }
 
 

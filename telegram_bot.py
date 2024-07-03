@@ -15,11 +15,11 @@ TOKEN = "7364282996:AAH1FtecWC3_L4p8pnoKyRpG-ww-itz4cIo"
 
 # Обработчик команды /start
 async def start(update: Update, context: CallbackContext):
-    keyboard = [[InlineKeyboardButton("Open Mini App", url="https://uplvl-2166e11a64c2.herokuapp.com/")]]
+    keyboard = [[InlineKeyboardButton("OPEN", url="http://t.me/SpotifyLevelBot/SpotifyLVL")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        text="Click the button below to open the mini app:",
+        text="CHECK OUT AN ARTIST'S \nLEVEL ON SPOTIFY ✳️\n\nSubscribe to me: @twoximusic",
         reply_markup=reply_markup
     )
 
