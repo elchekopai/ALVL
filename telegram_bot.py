@@ -1,6 +1,6 @@
 import os
 import logging
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, KeyboardButton, ReplyKeyboardMarkup, WebAppInfo
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackContext
 
 # Настройка логирования
@@ -15,11 +15,7 @@ TOKEN = "7364282996:AAH1FtecWC3_L4p8pnoKyRpG-ww-itz4cIo"
 
 # Обработчик команды /start
 async def start(update: Update, context: CallbackContext):
-    keyboard = [
-        [
-            InlineKeyboardButton("Open Mini App", web_app=WebAppInfo(url="https://uplvl-2166e11a64c2.herokuapp.com"))
-        ]
-    ]
+    keyboard = [[InlineKeyboardButton("Open Mini App", url="https://uplvl-2166e11a64c2.herokuapp.com/")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(

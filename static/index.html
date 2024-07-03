@@ -7,6 +7,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        function expandWebApp() {
+            Telegram.WebApp.expand();
+        }
+        document.addEventListener('DOMContentLoaded', expandWebApp);
+    </script>
 </head>
 <body>
     <div class="container-wrapper">
@@ -21,9 +28,8 @@
             </div>
         </div>
         <div id="results" class="section fade-in hidden">
-            <div class="result-badge hidden">
+            <div class="result-badge hidden"></div>
                 <span class="result-text"></span>
-            </div>
         </div>
         <!-- Добавляем место для Spotify плеера -->
         <div id="spotify-player" class="spotify-player fade-in hidden"></div>
