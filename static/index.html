@@ -18,28 +18,28 @@
 <body>
     <div class="container-wrapper">
         <div class="container center-align full-width fade-in hidden">
-            <div class="row input-field">
+            <form id="searchForm" class="row input-field">
                 <input type="text" id="artistName" placeholder="Enter Artist Name" class="validate">
-                <button class="search-btn" onclick="searchArtist()">
+                <button type="submit" class="search-btn">
                     Search
                     <i class="material-icons right">search</i>
                 </button>
                 <ul id="suggestions"></ul>
-            </div>
+            </form>
         </div>
         <div id="results" class="section fade-in hidden">
-    <div class="left-badge hidden">
-        <span class="left-text"></span>
-    </div>
-    <div class="right-badge hidden">
-        <div class="ranking-text">
-            <span class="top">TOP</span>
-            <span class="percentage">1%</span>
-            <br>
-            <span class="in-the-world">IN THE WORLD</span>
+            <div class="left-badge hidden">
+                <span class="left-text"></span>
+            </div>
+            <div class="right-badge hidden">
+                <div class="ranking-text">
+                    <span class="top">TOP</span>
+                    <span class="percentage">1%</span>
+                    <br>
+                    <span class="in-the-world">IN THE WORLD</span>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
         <!-- Добавляем место для Spotify плеера -->
         <div id="spotify-player" class="spotify-player fade-in hidden"></div>
     </div>
