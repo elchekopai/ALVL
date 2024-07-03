@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Получаем информацию о веб-приложении Telegram
-    const tgWebApp = window.Telegram.WebApp;
-
-    // Автоматически разворачиваем веб-приложение
-    tgWebApp.expand();
-
-    // Ваши остальные настройки и обработчики событий
     const input = document.getElementById('artistName');
     input.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
@@ -18,12 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
         showSuggestions(event.target.value);
     });
 
+    // Плавное появление строки поиска при загрузке страницы
     const searchContainer = document.querySelector('.container.full-width');
     searchContainer.classList.remove('hidden');
 });
 
 function searchArtist() {
-    clearResults();
+    clearResults(); // Очищаем результаты перед новым поиском
     const artistName = document.getElementById('artistName').value;
     fetch(`/api/search_artist?name=${artistName}`)
         .then(response => response.json())
@@ -47,6 +41,7 @@ function getLevelText(popularity) {
     return 'FRESHMAN';
 }
 
+// Добавил эту функцию
 function animateFollowerCount(element, target) {
     let count = 0;
     const step = target / 100;
@@ -72,12 +67,10 @@ function displayArtist(data) {
     `;
 
     resultsDiv.innerHTML = `
-        <div class="image-container">
-            <img src="${data.image}" alt="${data.name}">
-            <div class="corner-badge hidden">
-                <span>${levelText}</span>
-            </div>
+        <div class="result-badge hidden">
+            <span class="result-text">${levelText}</span>
         </div>
+        <img src="${data.image}" alt="${data.name}">
         <h2>${data.name}</h2>
         <div class="level-bar-container">
             <div class="level-bar" style="--bar-width: ${levelBarWidth};">
@@ -99,13 +92,16 @@ function displayArtist(data) {
     `;
     resultsDiv.classList.remove('hidden');
 
+    // Анимируем число подписчиков
     animateFollowerCount(document.querySelector('.follower-count'), data.followers);
+
+    // Анимируем число популярности
     animatePopularityCount(document.querySelector('.level-text'), data.popularity);
 
-    const cornerBadge = document.querySelector('.corner-badge');
-    if (cornerBadge) {
-        cornerBadge.textContent = levelText;
-        cornerBadge.classList.remove('hidden');
+    // Показываем иконку уровня
+    const levelIcon = document.querySelector('.result-badge');
+    if (levelIcon) {
+        levelIcon.classList.remove('hidden');
     }
 }
 
@@ -136,7 +132,7 @@ function displayError(message) {
 function clearResults() {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
-    resultsDiv.classList.add('hidden');
+    resultsDiv.classList.add('hidden'); // Скрываем блок с результатами
 }
 
 function showSuggestions(query) {
@@ -165,5 +161,5 @@ function clearSuggestions() {
 function selectSuggestion(name) {
     document.getElementById('artistName').value = name;
     clearSuggestions();
-    searchArtist();
+    searchArtist();  // Автоматический поиск при выборе подсказки
 }

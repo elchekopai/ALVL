@@ -1,28 +1,40 @@
+import os
+import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, CallbackContext
+from telegram.ext import ApplicationBuilder, CommandHandler, CallbackContext
+
+# Настройка логирования
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+
+# Получение токена из переменной окружения или использование токена прямо в коде
+TOKEN = "7364282996:AAH1FtecWC3_L4p8pnoKyRpG-ww-itz4cIo"
 
 
-# Функция для отправки сообщения с кнопкой
-def start(update: Update, context: CallbackContext) -> None:
-    keyboard = [
-        [InlineKeyboardButton("Перейти на сайт", url="https://uplvl-2166e11a64c2.herokuapp.com/")]
-    ]
+# Обработчик команды /start
+async def start(update: Update, context: CallbackContext):
+    keyboard = [[InlineKeyboardButton("Open Mini App", url="http://t.me/SpotifyLevelBot/SpotifyLVL")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text('Нажмите кнопку ниже, чтобы перейти на сайт:', reply_markup=reply_markup)
+
+    await update.message.reply_text(
+        text="Click the button below to open the mini app:",
+        reply_markup=reply_markup
+    )
 
 
+# Основная функция для запуска бота
 def main():
-    # Ваш токен
-    updater = Updater("7364282996:AAH1FtecWC3_L4p8pnoKyRpG-ww-itz4cIo")
+    # Создание экземпляра приложения
+    application = ApplicationBuilder().token(TOKEN).build()
 
-    dispatcher = updater.dispatcher
+    # Добавление обработчика команды /start
+    application.add_handler(CommandHandler("start", start))
 
-    # Обработчик команды /start
-    dispatcher.add_handler(CommandHandler("start", start))
-
-    updater.start_polling()
-    updater.idle()
+    # Запуск бота
+    application.run_polling()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
