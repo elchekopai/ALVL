@@ -47,19 +47,19 @@ function getLevelText(popularity) {
 }
 
 function getRankingText(popularity) {
-    if (popularity >= 95) return 'TOP 1% IN THE WORLD';
-    if (popularity >= 90) return 'TOP 2% IN THE WORLD';
-    if (popularity >= 86) return 'TOP 3% IN THE WORLD';
-    if (popularity >= 80) return 'TOP 5% IN THE WORLD';
-    if (popularity >= 70) return 'TOP 10% IN THE WORLD';
-    if (popularity >= 60) return 'TOP 20% IN THE WORLD';
-    if (popularity >= 50) return 'TOP 30% IN THE WORLD';
-    if (popularity >= 41) return 'TOP 40% IN THE WORLD';
-    if (popularity >= 31) return 'TOP 50% IN THE WORLD';
-    if (popularity >= 21) return 'TOP 60% IN THE WORLD';
-    if (popularity >= 16) return 'TOP 70% IN THE WORLD';
-    if (popularity >= 10) return 'TOP 80% IN THE WORLD';
-    return 'TOP 90% IN THE WORLD';
+    if (popularity >= 95) return { text: 'TOP 1% IN THE WORLD', class: 'top-1' };
+    if (popularity >= 90) return { text: 'TOP 2% IN THE WORLD', class: 'top-2' };
+    if (popularity >= 86) return { text: 'TOP 3% IN THE WORLD', class: 'top-3' };
+    if (popularity >= 80) return { text: 'TOP 5% IN THE WORLD', class: 'top-5' };
+    if (popularity >= 70) return { text: 'TOP 10% IN THE WORLD', class: 'top-10' };
+    if (popularity >= 60) return { text: 'TOP 20% IN THE WORLD', class: 'top-20' };
+    if (popularity >= 50) return { text: 'TOP 30% IN THE WORLD', class: 'top-30' };
+    if (popularity >= 41) return { text: 'TOP 40% IN THE WORLD', class: 'top-40' };
+    if (popularity >= 31) return { text: 'TOP 50% IN THE WORLD', class: 'top-50' };
+    if (popularity >= 21) return { text: 'TOP 60% IN THE WORLD', class: 'top-60' };
+    if (popularity >= 16) return { text: 'TOP 70% IN THE WORLD', class: 'top-70' };
+    if (popularity >= 10) return { text: 'TOP 80% IN THE WORLD', class: 'top-80' };
+    return { text: 'TOP 90% IN THE WORLD', class: 'top-90' };
 }
 
 // Добавил эту функцию
@@ -80,7 +80,7 @@ function displayArtist(data) {
     const resultsDiv = document.getElementById('results');
     const levelBarWidth = `${data.popularity}%`;
     const levelText = getLevelText(data.popularity);
-    const rankingText = getRankingText(data.popularity); // Получаем текст ранжирования
+    const rankingData = getRankingText(data.popularity); // Получаем текст и класс ранжирования
 
     const spotifyPlayer = `
         <iframe src="https://open.spotify.com/embed/artist/${data.id}" 
@@ -93,11 +93,11 @@ function displayArtist(data) {
         <div class="left-badge hidden">
             <span class="left-text">${levelText}</span>
         </div>
-        <div class="right-badge hidden">
+        <div class="right-badge hidden ${rankingData.class}">
             <div class="ranking-text">
-                <span class="top-percentage">${rankingText.split(' ')[0]} ${rankingText.split(' ')[1]}</span>
+                <span class="top-percentage">${rankingData.text.split(' ')[0]} ${rankingData.text.split(' ')[1]}</span>
                 <br>
-                <span class="in-the-world">${rankingText.split(' ').slice(2).join(' ')}</span> <!-- IN THE WORLD -->
+                <span class="in-the-world">${rankingData.text.split(' ').slice(2).join(' ')}</span>
             </div>
         </div>
         <img src="${data.image}" alt="${data.name}">

@@ -382,6 +382,60 @@ button.listen {
     font-size: 0.5em;
     text-align: center;
 }
+/* Градиентный фон для классов ранжирования */
+.top-1 {
+    background: linear-gradient(to right, #1EA5BA, #746DF7);
+}
+
+.top-2 {
+    background: linear-gradient(to right, #1E67BA, #B74CFF);
+}
+
+.top-3 {
+    background: linear-gradient(to right, #3F82D0, #A44FDD);
+}
+
+.top-5 {
+    background: linear-gradient(to right, #2677D4, #A539EC);
+}
+
+.top-10 {
+    background: linear-gradient(to right, #25D342, #6480FC);
+}
+
+.top-20 {
+    background: linear-gradient(to right, #1db954, #1db954);
+}
+
+.top-30 {
+    background: linear-gradient(to right, #1db954, #1db954);
+}
+
+.top-40 {
+    background: linear-gradient(to right, #1db954, #1db954);
+}
+
+.top-50 {
+    background: linear-gradient(to right, #1db954, #1db954);
+}
+
+.top-60 {
+    background: linear-gradient(to right, #1db954, #1db954);
+}
+
+.top-70 {
+    background: linear-gradient(to right, #1db954, #1db954);
+}
+
+.top-80 {
+    background: linear-gradient(to right, #1db954, #1db954);
+}
+
+.top-90 {
+    background: linear-gradient(to right, #1db954, #1db954);
+}
+
+/* Другие классы для других уровней популярности */
 
 
 @media (max-width: 600px) {
