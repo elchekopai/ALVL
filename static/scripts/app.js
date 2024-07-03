@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     if (window.Telegram.WebApp) {
-        Telegram.WebApp.expand();
+        Telegram.WebApp.ready();  // Сообщаем, что веб-приложение готово
+        Telegram.WebApp.expand(); // Расширяем веб-приложение на весь экран
     }
 
-    // Остальной код
     const input = document.getElementById('artistName');
     input.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
