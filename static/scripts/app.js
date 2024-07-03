@@ -40,10 +40,10 @@ function searchArtist() {
 }
 
 function getLevelText(popularity) {
-    if (popularity >= 80) return 'SUPER STAR';
-    if (popularity >= 50) return 'STAR';
-    if (popularity >= 20) return 'ARTIST';
-    return 'FRESHMAN';
+    if (popularity >= 80) return '💎';
+    if (popularity >= 50) return '⭐️';
+    if (popularity >= 20) return '😎';
+    return '🎧';
 }
 
 function getRankingText(popularity) {
@@ -104,7 +104,7 @@ function displayArtist(data) {
         <h2>${data.name}</h2>
         <div class="level-bar-container">
             <div class="level-bar" style="--bar-width: ${levelBarWidth};">
-                <span class="level-text" data-popularity="${data.popularity}">0</span>
+                <span class="level-text" data-popularity="${data.popularity}">${data.popularity} lvl</span>
             </div>
         </div>
         <p class="followers"><span class="emoji">👤</span> <span class="follower-count" data-followers="${data.followers}">0</span></p>
@@ -146,7 +146,7 @@ function animatePopularityCount(element, target) {
             count = target;
             clearInterval(interval);
         }
-        element.textContent = Math.floor(count);
+        element.textContent = `${Math.floor(count)} lvl`;
     }, 20);
 }
 
